@@ -23,6 +23,7 @@ void Demo6_8();
 void Demo6_9();
 void Demo6_10();
 void Demo6_11();
+void Demo6_12();
 
 int main() {
     // insert code here...
@@ -37,10 +38,41 @@ int main() {
 //    Demo6_8();
 //    Demo6_9();
 //    Demo6_10();
-    Demo6_11();
+//    Demo6_11();
+    Demo6_12();
+    
     
     return 0;
     
+}
+void Demo6_12(){
+    int someNums[] = { 1, 101, -1, 40, 2040 };
+    
+    /*---------------What is the meaning of '&'. Why it appears here?----------------*/
+    for (const int& aNum : someNums)
+        cout << aNum << ' ';
+    cout << endl;
+    
+    for (auto anElement : { 5, 222, 110, -45, 2017 })
+        cout << anElement << ' ';
+    cout << endl;
+    
+    char charArray[] = { 'h', 'e', 'l', 'l', 'o' };
+    for (auto aChar : charArray)
+        cout << aChar << ' ';
+    cout << endl;
+    
+    double moreNums[] = { 3.14, -1.3, 22, 10101 };
+    for (auto anElement : moreNums)
+        cout << anElement << ' ';
+    cout << endl;
+    
+    /***************定义string！！*******************/
+    string sayHello{ "Hello World!"};
+    /**********************************************/
+    for (auto anElement : sayHello)
+        cout << anElement << ' ';
+    cout << endl;
 }
 void Demo6_11(){
     // without loop expression (third expression missing)
