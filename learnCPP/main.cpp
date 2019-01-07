@@ -24,6 +24,8 @@ void Demo6_9();
 void Demo6_10();
 void Demo6_11();
 void Demo6_12();
+void Demo6_13();
+void Demo6_14();
 
 int main() {
     // insert code here...
@@ -39,10 +41,66 @@ int main() {
 //    Demo6_9();
 //    Demo6_10();
 //    Demo6_11();
-    Demo6_12();
-    
+//    Demo6_12();
+//    Demo6_13();
+    Demo6_14();
     
     return 0;
+    
+}
+// Using Nested Loops to Multiply Each Element in an Array by Each in Another
+void Demo6_14(){
+    const int ARRAY1_LEN = 3;
+    const int ARRAY2_LEN = 2;
+    
+    //Using vector(dynamic array) to add 3 number
+    cout << "Enter 3 Element:" << endl;
+    int element = 0;
+    vector<int> dynArray (3);
+    for (int index = 0; index < ARRAY1_LEN; ++index)
+    {
+        cout << "Enter a Element:" << endl;
+        cin >> element;
+        dynArray[index] = element;
+    }
+    
+//    int myNums1[ARRAY1_LEN] = {35, -3, 0};
+    int myNums2[ARRAY2_LEN] = {20, -1};
+    
+    cout << "Multiplying each int in myNums1 by each in myNums2:" << endl;
+    
+    for (int index1 = 0; index1 < ARRAY1_LEN; ++index1)
+        for (int index2 = 0; index2 < ARRAY2_LEN; ++index2)
+            cout << dynArray[index1] << " x " << myNums2[index2] \
+            << " = " << dynArray[index1] * myNums2[index2] << endl;
+}
+/* Using continue to Restart and break to Exit an Infinite for Loop*/
+void Demo6_13(){
+    for(;;)     // an infinite loop
+    {
+        cout << "Enter two integers: " << endl;
+        int num1 = 0, num2 = 0;
+        cin >> num1;
+        cin >> num2;
+        
+        cout << "Do you wish to correct the numbers? (y/n): " ;
+        char changeNumbers = '\0';
+        cin >> changeNumbers;
+        
+        if (changeNumbers == 'y')
+            continue; //restart the loop!
+        cout << num1 << " x " << num2 << " = " << num1 * num2 << endl;
+        cout << num2 << " x " << num1 << " = " << num1 + num2 << endl;
+        
+        cout << "Press x to exit or any other key to recalculate" << endl;
+        char userSelection = '\0';
+        cin >> userSelection;
+        
+        if (userSelection == 'x')
+            break;      //exit the infinite loop
+    }
+    
+    cout << "Goodbye!" << endl;
     
 }
 void Demo6_12(){
