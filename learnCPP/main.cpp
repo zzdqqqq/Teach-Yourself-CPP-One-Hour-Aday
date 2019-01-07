@@ -73,6 +73,11 @@ void Demo6_12(){
     for (auto anElement : sayHello)
         cout << anElement << ' ';
     cout << endl;
+    
+    const string helloString = "hello";
+    for (auto stringElement : helloString)
+        cout << stringElement << ' ';
+    cout << endl;
 }
 void Demo6_11(){
     // without loop expression (third expression missing)
