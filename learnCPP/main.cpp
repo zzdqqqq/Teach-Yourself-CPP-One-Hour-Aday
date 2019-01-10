@@ -26,6 +26,10 @@ void Demo6_11();
 void Demo6_12();
 void Demo6_13();
 void Demo6_14();
+void Demo6_15();
+void Demo6_16();
+int exercise6_1();
+void BugBuster7();
 
 int main() {
     // insert code here...
@@ -43,10 +47,112 @@ int main() {
 //    Demo6_11();
 //    Demo6_12();
 //    Demo6_13();
-    Demo6_14();
+//    Demo6_14();
+//    Demo6_15();
+//    Demo6_16();
+//    exercise6_1();
+    BugBuster7();
     
     return 0;
     
+}
+void BugBuster7(){
+    cout << "Enter a number between 0 and 4" << endl;
+    int input = 0;
+    cin >> input;
+    switch(input){
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+            cout << "Valid input" << endl;
+            break;
+        default:
+            cout << "Invalid input" << endl;
+    }
+}
+int exercise6_1(){
+    vector<int> arrayOriginal{ 1, 2, 3, 4 };
+    vector<int> arrayNew{};
+    auto temp = 0;
+    
+    for (int count = 0; count < 4; ++count)
+    {
+        temp = arrayOriginal.back();
+        arrayOriginal.pop_back();
+        arrayNew.push_back(temp);
+        
+    }
+    for (int i = 0; i < 4; ++i)
+    {
+        cout << arrayNew[i] << endl;
+    }
+    return 0;
+}
+//Using Nested for Loops to Calculate a Fibonacci Series
+void Demo6_16(){
+    const int numsToCalculate = 5;
+    cout << "This program will calculate " << numsToCalculate \
+         << " Fibonacci Numbers at a time" << endl;
+    
+    int num1 = 0, num2 = 1;
+    char wantMore = '\0';
+    cout << num1 << " " << num2 << " ";
+    
+    do
+    {
+        for (int counter = 0; counter < numsToCalculate; ++ counter)
+        {
+            cout << num1 + num2 << " ";
+            int num2Temp = num2;
+            num2 = num1 + num2;
+            num1 = num2Temp;
+        }
+        
+        cout << endl << "Do you want more numbers (y/n)? ";
+        cin >> wantMore;
+    }while(wantMore == 'y');
+}
+//Using Nested for Loops to Calculate a Fibonacci Series(by myself)
+/* void Demo6_16(){
+    cout << "This program will calculate 5 Fibonacci Numbers at a time" << endl;
+    
+    int Num1 = 0, Num2 = 1,NumTemp = 0, TIMES = 2;
+    char userSelection = '\0';
+    do
+    {
+        cout << Num1 << ' ' << Num2 << ' ' << endl;;
+        for (int count = 0; count < TIMES; ++count)
+        {
+            Num1 = Num1 + Num2;
+            Num2 = Num2 + Num1;
+            NumTemp = Num1;
+        }
+        cout << "Do you want more numbers (y/n)?" << endl;
+        cin >> userSelection;
+    }while(userSelection == 'y');
+    cout << "Goodbye!" << endl;
+} */
+// Using Nested Loops to Iterte Elements in a Two_dimensional Array of Integers
+void Demo6_15(){
+    const int NUM_ROWS = 3;
+    const int NUM_COLUMNS = 4;
+    
+    // 2D array of integers
+    int MyInts[NUM_ROWS][NUM_COLUMNS] = { {34, -1, 879, 22},
+                                        {24, 365, -101, -1},
+                                        {-20, 40, 90, 97} };
+    // iterate rows, each arry of int
+    for (int row = 0; row < NUM_ROWS; ++row)
+    {
+        //interate integers in each row (columns)
+        for (int column = 0; column < NUM_COLUMNS; ++column)
+        {
+            cout << "Integer[" << row << "][" << column \
+            << "] = " << MyInts[row][column] << endl;
+        }
+    }
 }
 // Using Nested Loops to Multiply Each Element in an Array by Each in Another
 void Demo6_14(){
