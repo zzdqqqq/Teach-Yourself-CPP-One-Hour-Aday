@@ -7,9 +7,37 @@
 //
 
 #include <iostream>
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+const double Pi = 3.14159265;
+
+// Function Declarations (Prototypes)
+double Area(double radius);
+double Circumference(double radius);
+
+int main()
+{
+    cout << "Two Functions That Compute the Area and Circumference of a Circle Given Radius" << endl;
+    cout << "Enter radius: " ;
+    double radius = 0;
+    cin >> radius;
+    
+    // Call function "Area"
+    cout << "Area is: " << Area(radius) << endl;
+    
+    // Call function "Circumference"
+    cout << "Circumference is: " << Circumference(radius) << endl;
+    
     return 0;
+}
+
+// Function definitions (implenmentations)
+double Area(double radius)
+{
+    return Pi * radius * radius;
+}
+
+double Circumference(double radius)
+{
+    return 2 * Pi * radius;
 }
