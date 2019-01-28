@@ -33,7 +33,7 @@ int main()
     cout << endl;
     
     // return pointer to initial position
-    pointsToInts -= numEntries;
+    pointsToInts -= numEntries;// 必须把指针变回去才能删！！！！！！！
     
     // done with using memory? release
     delete [] pointsToInts;
