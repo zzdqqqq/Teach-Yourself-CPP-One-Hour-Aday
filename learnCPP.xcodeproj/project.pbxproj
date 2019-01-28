@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		804CB33B21FA234100024895 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 804CB33A21FA234100024895 /* main.cpp */; };
 		807D30F721F79D540094F7BA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 807D30F621F79D540094F7BA /* main.cpp */; };
 		807D310221F7B1BB0094F7BA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 807D310121F7B1BB0094F7BA /* main.cpp */; };
 		807D310D21F7B2E90094F7BA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 807D310C21F7B2E90094F7BA /* main.cpp */; };
@@ -29,6 +30,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		804CB33621FA234100024895 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		807D30F221F79D540094F7BA /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -203,6 +213,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		804CB33821FA234100024895 /* DistanceBetweenPointers */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DistanceBetweenPointers; sourceTree = BUILT_PRODUCTS_DIR; };
+		804CB33A21FA234100024895 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		807D30F421F79D540094F7BA /* Lesson8_1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lesson8_1; sourceTree = BUILT_PRODUCTS_DIR; };
 		807D30F621F79D540094F7BA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		807D30FF21F7B1BB0094F7BA /* Lesson8_3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lesson8_3; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,6 +256,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		804CB33521FA234100024895 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		807D30F121F79D540094F7BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -380,6 +399,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		804CB33921FA234100024895 /* DistanceBetweenPointers */ = {
+			isa = PBXGroup;
+			children = (
+				804CB33A21FA234100024895 /* main.cpp */,
+			);
+			path = DistanceBetweenPointers;
+			sourceTree = "<group>";
+		};
 		807D30F521F79D540094F7BA /* Lesson8_1 */ = {
 			isa = PBXGroup;
 			children = (
@@ -466,6 +493,7 @@
 				8081B0FC21F8E4E60066EF46 /* Lesson8_7 */,
 				8081B10721F8FD410066EF46 /* Lesson8_8 */,
 				8081B11221F924090066EF46 /* Lesson8_9 */,
+				804CB33921FA234100024895 /* DistanceBetweenPointers */,
 				8082EDE42188126A002B7CEA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -492,6 +520,7 @@
 				8081B0FB21F8E4E60066EF46 /* Lesson8_7 */,
 				8081B10621F8FD410066EF46 /* Lesson8_8 */,
 				8081B11121F924090066EF46 /* Lesson8_9 */,
+				804CB33821FA234100024895 /* DistanceBetweenPointers */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -587,6 +616,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		804CB33721FA234100024895 /* DistanceBetweenPointers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 804CB33E21FA234100024895 /* Build configuration list for PBXNativeTarget "DistanceBetweenPointers" */;
+			buildPhases = (
+				804CB33421FA234100024895 /* Sources */,
+				804CB33521FA234100024895 /* Frameworks */,
+				804CB33621FA234100024895 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DistanceBetweenPointers;
+			productName = DistanceBetweenPointers;
+			productReference = 804CB33821FA234100024895 /* DistanceBetweenPointers */;
+			productType = "com.apple.product-type.tool";
+		};
 		807D30F321F79D540094F7BA /* Lesson8_1 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 807D30FA21F79D540094F7BA /* Build configuration list for PBXNativeTarget "Lesson8_1" */;
@@ -919,6 +965,9 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "张子洞";
 				TargetAttributes = {
+					804CB33721FA234100024895 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					807D30F321F79D540094F7BA = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -1009,11 +1058,20 @@
 				8081B0FA21F8E4E60066EF46 /* Lesson8_7 */,
 				8081B10521F8FD410066EF46 /* Lesson8_8 */,
 				8081B11021F924090066EF46 /* Lesson8_9 */,
+				804CB33721FA234100024895 /* DistanceBetweenPointers */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		804CB33421FA234100024895 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				804CB33B21FA234100024895 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		807D30F021F79D540094F7BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1169,6 +1227,24 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		804CB33C21FA234100024895 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 83V28466AT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		804CB33D21FA234100024895 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 83V28466AT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		807D30F821F79D540094F7BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1625,6 +1701,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		804CB33E21FA234100024895 /* Build configuration list for PBXNativeTarget "DistanceBetweenPointers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				804CB33C21FA234100024895 /* Debug */,
+				804CB33D21FA234100024895 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		807D30FA21F79D540094F7BA /* Build configuration list for PBXNativeTarget "Lesson8_1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

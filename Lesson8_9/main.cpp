@@ -28,7 +28,8 @@ int main()
     cout << "Displaying all numbers entered: " << endl;
     for(int counter = 0; counter < numEntries; ++counter)
         cout << *(pointsToInts++) << " ";
-    
+    // 用new构造的动态array 可以用指针加法来读取array里面每一个值。
+    // 普通的array，指针加1相当于找下一个array的第一个指针。
     cout << endl;
     
     // return pointer to initial position
